@@ -25,7 +25,6 @@ dataObj.prototype.draw = function()
 	cxt1.shadowBlur = 10;
 	cxt1.shadowColor = "white";
 	cxt1.fillText("SCORE: "+this.score,this.scaleX * 0.4,this.scaleY-30);
-	console.log("score");
 	if(baby.gameOver)
 	{
 		this.alpha += dalteTime * 0.001 ;
