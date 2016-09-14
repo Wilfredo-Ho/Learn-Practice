@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择困难症终结者</title>
+
+
+	<script>
+		window.onload = function()
+		{
+			var txtInput = document.getElementsByTagName('input');
+			var p_well = document.getElementById('well');
+			p_well.innerHTML = "<b>Advised option</b>:   ";
+
+			var i = Math.random();
+			txtInput[2].onclick = function()
+			{
+				p_well.innerHTML = "<b>Advised option</b>:   ";
+				if(txtInput[0].value && txtInput[1].value)
+				{
+					if(i > 0.5)
+					{
+						p_well.innerHTML += txtInput[0].value;
+					}else{
+						p_well.innerHTML += txtInput[1].value;
+					}
+				}
+			};
+		}
+	</script>
+	<style>
+		*{box-sizing:border-box;}
+		body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;background-color: #fff;}
+		a{text-decoration: none;}
+		.container{width:40%;margin:50px auto;padding:30px 50px 0px 50px;border:1px solid #ccc;}
+		/*.panel{margin:30px auto;}*/	
+		.panel-heading{border-bottom: 1px solid #ddd;padding: 10px 5px;}
+		.panel-heading .panel-title{font-size: 18px;}
+		.panel-body{padding: 15px 0;}
+		.input-group{padding:8px 4px;overflow: hidden;}
+		.input-group .input-group-addon:first-child{width:17%;display:inline-block;float:left;color: #fff;background-color: #31b0d5;border:1px solid #269abc;display: inline-block;padding: 6px 12px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;}
+		.input-group .form-control:last-child{display:inline-block ;float: left;width:83%;height: 34px;padding: 6px 12px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;color:#555;border: 1px solid #ccc;box-sizing:border-box;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
+		.btn{display:inline-block;padding:6px 12px;font-size: 14px;font-weight: 400;line-height: 1.42857143;border-radius: 4px;cursor: pointer;margin: 10px 10px;}
+		.btn-primary{color:#fff;border:1px solid #2e6da4;background-color: #337ab7;margin-left: 4px;}
+		.btn-primary:hover,.btn-primary:focus{color: #fff;background-color: #204d74;border-color: #122b40;}
+		.btn-warning{color: #fff;background-color: #ec971f;border:1px solid #d58512;}
+		.btn-warning:hover,.btn-warning:focus{color: #fff;background-color: #d58512;border-color: #985f0d;}
+		.well{padding:12px;border:1px solid #e3e3e3;background:#f5f5f5;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.05);}
+		.panel-footer{margin-top: 10px;}
+		.panel-footer p{line-height: 1.42857143;padding: 10px 0px;border-top: 1px solid #ccc;margin-bottom: 5px;}
+		/*textarea.form-control{width:70%;float:left;margin-left: 20px;}*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="panel">
+			<div class="panel-heading">
+				<div class="panel-title">End your choices problems</div>
+			</div>
+			<div class="panel-body">
+				<div class="input-group">
+					<span class="input-group-addon">option1</span>
+					<input type="text" placeholder="The first option" class="form-control">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">option2</span>
+					<input type="text" placeholder="The second option" class="form-control">
+				</div>
+				<input type="button" class="btn btn-primary" value="result">
+				<a href="" class="btn btn-warning">reset</a>
+				<p class="well" id="well"></p>
+			</div>
+			<div class="panel-footer">
+				<p><i>Just providing an advise, remember "<b>All the roads lead to Rome</b>".</i></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
